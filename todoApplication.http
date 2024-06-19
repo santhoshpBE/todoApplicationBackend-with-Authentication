@@ -1,0 +1,67 @@
+###
+
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{    
+    "username": "ravi12345",
+    "password": "ravivarma",
+    "gender":"male",
+    "location":"Erode"
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{    
+    "username": "ravi12345",
+    "password": "ravivarma"
+
+}
+
+GET http://localhost:3000/todos/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
+
+###
+GET http://localhost:3000/todos/?status=TO%20DO
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
+###
+GET http://localhost:3000/todos/6/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
+###
+
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
+
+###
+
+POST http://localhost:3000/todos/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
+Content-Type:application/json
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+
+###
+PUT http://localhost:3000/todos/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
+Content-Type:application/json
+{
+      "priority": "HIGH"
+}
+
+###
+DELETE http://localhost:3000/todos/6/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
+
+
+###
+GET http://localhost:3000/agenda/?date=2021-12-12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkxMjM0NSIsImlhdCI6MTcxODc3Njk3M30.ZzbwsccMhWv5tWzO8cWGDU7n37zU9eSkfsv65FHtpfo
